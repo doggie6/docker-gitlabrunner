@@ -1,0 +1,24 @@
+version: '2.1'
+
+services:
+  gitlab-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    image: doggie6/gitlab-runner:ubuntu-v9.3..0
+#    command: []
+#    entrypoint: []
+    restart: always
+    container_name: gitlab-runner
+    hostname: gitlab-runner
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/gitlab-runner/config:/etc/gitlab-runner:Z
+#    ports:
+#      - "xx:xx"
+#    environment:
+#      JAVA_MAX_HEAP: 1200m
+#      JAVA_MIN_HEAP: 1200m
+#      # EXTRA_JAVA_OPTS:
