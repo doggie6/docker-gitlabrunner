@@ -41,3 +41,25 @@ https://docs.gitlab.com/runner/install/docker.html
 - Choose whether the Runner should pick up jobs that do not have tags, you can change this later in GitLab's UI (defaults to false):
 
 ...
+
+
+
+## runner内使用docker
+
+>
+https://docs.gitlab.com/ce/ci/docker/using_docker_build.html
+
+暂时定用下面这种
+
+```
+sudo gitlab-ci-multi-runner register -n \
+  --url https://gitlab.com/ \
+  --registration-token REGISTRATION_TOKEN \
+  --executor docker \
+  --description "My Docker Runner" \
+  --docker-image "docker:latest" \
+  --docker-volumes /var/run/docker.sock:/var/run/docker.sock
+```
+
+
+
