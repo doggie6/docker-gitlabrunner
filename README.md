@@ -61,5 +61,8 @@ sudo gitlab-ci-multi-runner register -n \
   --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 ```
 
+## 使用私有仓库镜像 配置个变量
 
+>
+http://gitlab.internal:10080/help/ci/docker/using_docker_images.md
 
