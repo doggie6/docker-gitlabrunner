@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         buildno: 1
-    image: doggie6/gitlab-runner:ubuntu-v9.3..0
+    image: doggie6/gitlab-runner:ubuntu-v9.3.0
 #    command: []
 #    entrypoint: []
     restart: always
